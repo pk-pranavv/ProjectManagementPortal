@@ -101,7 +101,7 @@
     border-radius: 50px;
     margin: 10px 0px;
   }
-  
+
 
   .dashpic img {
     width: 55px;
@@ -110,3 +110,24 @@
     margin-left: 0px;
     padding: 0;
   }
+
+  .bottomdiv {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin-top: 10px;
+  }
+
+  .graphdiv{
+    margin-left: 100px;
+    /* float: right; */
+  }
+
+  #formdiv{
+    display: flex;
+    margin-left: 100px;
+  
+    
+  }
+
+  
