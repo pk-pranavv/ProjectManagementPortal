@@ -2,26 +2,20 @@ from cProfile import label
 from crypt import methods
 from flask import Flask, render_template, request, redirect
 import os
-import login_fun
+import login_fun, issues
+
 app=Flask(__name__)
 user=""
+
 @app.route("/")
 def main():
     return render_template('login.html')
 
 @app.route("/dashboard")
 def dashboard():
-    data=[
-        ("jan", 100),
-        ("feb", 670),
-        ("mar", 600),
-        ("apr", 871),
-        ("may", 674),
-        ("jun", 1000)
-    ]
-    labels=[row[0] for row in data]
-    values=[row[1] for row in data]
-    return render_template('dashboard.html',user=user,labels=labels,values=values)
+    values=[]
+    values=issues.getarray()
+    return render_template('dashboard.html',user=user,values=values)
 
 @app.route("/tasks")
 def tasks():
