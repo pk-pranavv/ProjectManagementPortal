@@ -3,6 +3,28 @@
 
     </head>
     <body>
-        <h1>Dashboard page</h1>
+        <html>
+    <head>
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/dashboard.css') }}">
+
+    </head>
+    <body>
+        <div class="sidebar">
+            <a href="/dashboard">Dashboard</a>
+            <a href="/tasks">My Tasks</a>
+            <a href="team">My Team</a>
+        </div>
+        <div class="content">
+            <div class="topdiv">
+                <img src="{{url_for('static', filename='images/user.jpg')}}"/>
+                <div class="topcontent">
+                    <p>    Hello Alay</p>
+                    <p>    Your talent determines what you can do. Your motivation determines how much you are willing to do. Your attitude determines how well you do it.</p>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>        
     </body>
 </html>
