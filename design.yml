@@ -1,0 +1,7 @@
+main file --> routes.py
+menu --> dashboard(graph), tasks, team(members with roles)
+
+paths --> /   login page
+          /dashboard
+          /tasks
+          /team
