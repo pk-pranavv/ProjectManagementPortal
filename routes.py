@@ -17,6 +17,14 @@ def dashboard():
     values=issues.getarray()
     return render_template('dashboard.html',user=user,values=values)
 
+@app.route("/issueadded",methods=['POST'])
+def addissue():
+    desc=request.form['desc']
+    ass=request.form['assigned']
+    status=request.form['status']
+    issues.addissue(desc,ass,status)
+    return redirect('/dashboard')
+
 @app.route("/tasks")
 def tasks():
     return render_template('tasks.html')

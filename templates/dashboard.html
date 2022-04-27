@@ -11,10 +11,33 @@
     </head>
     <body>
         <div class="sidebar">
-            <a href="/dashboard">Dashboard</a>
-            <a href="/tasks">My Tasks</a>
-            <a href="team">My Team</a>
+            <div class="dashpic" >
+                <img src="../static/images/user.jpg" alt="1">
+                <a href="/dashboard">Dashboard</a>
+            </div>
+            <div class="dashpic">
+                <img src="../static/images/user.jpg" alt="1">
+                <a href="/tasks">My Tasks</a>
+            </div>
+            <div class="dashpic">
+                <img src="../static/images/user.jpg" alt="1">
+                <a href="team">My Team</a>
+            </div>
+            <div class="dashpic">
+                <img src="../static/images/user.jpg" alt="1">
+                <a href="team">TBD</a>
+            </div>
+            <div class="dashpic">
+                <img src="../static/images/user.jpg" alt="1">
+                <a href="team">TBD</a>
+            </div>
+            <div class="dashpic">
+                <img src="../static/images/user.jpg" alt="1">
+                <a href="team">TBD</a>
+            </div>
         </div>
+
+
         <div class="content">
             <div class="topdiv">
                 <img src="{{url_for('static', filename='images/user.jpg')}}"/>
@@ -24,6 +47,7 @@
                     <p>    Your talent determines what you can do. Your motivation determines how much you are willing to do. Your attitude determines how well you do it.</p>
                 </div>
             </div>
+            <div class="bottomdiv">
             <div class="graphdiv">
                 <canvas id="Chart" width="900" height="400"></canvas>
                 <script>
@@ -52,6 +76,23 @@
                 </script>
 
             </div>
+            <div class="formdiv">
+                <form action="/issueadded" method="post">
+                    <label>Enter Description</label>
+                    <input type="text" name="desc" />
+                    <label>Assign to</label>
+                    <input type="text" name="assigned" />
+                    <label>Status</label>
+                    <select name="status">
+                        <option value="completed">Completed</option>
+                        <option value="inprogress">In Progress</option>
+                        <option value="todo">To do</option>
+                    </select>
+                    <input type="submit" />
+                </form>
+
+            </div>
+        </div>
         </div>
 
     </body>

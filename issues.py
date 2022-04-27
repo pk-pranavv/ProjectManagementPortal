@@ -30,4 +30,3 @@ def getarray():
     print(arr)
     return arr
 
-getarray()
