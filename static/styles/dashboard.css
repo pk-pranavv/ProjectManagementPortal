@@ -3,7 +3,7 @@
     margin: 0;
     margin-top: 0;
     padding: 0;
-    width: 15%;
+    width: 200px;
     background-color: #7CD2F5;
     position: fixed;
     height: 100%;
@@ -21,7 +21,7 @@
     font-weight: bold;
   }
   
-  .sidebar a.active {
+   /* .sidebar a.active {
     background-color: #04AA6D;
     color: white;
   }
@@ -29,7 +29,7 @@
   .sidebar a:hover:not(.active) {
     background-color: #555;
     color: white;
-  }
+  }  */
   
   div.content {
     margin-left: 200px;
@@ -38,7 +38,7 @@
   }
 
   div.topdiv {
-    position: fixed;
+    position:fixed;
     border-radius: 20px;
     background-color: #7CD2F5;
     top: 15;
@@ -91,4 +91,22 @@
       align-self: center;
       vertical-align: middle;
       margin-top: 0%;
+  }
+
+  .dashpic{
+    display: flex;
+    background-color: rgb(73, 142, 199);
+    /* width: 80%; */
+    color: black;
+    border-radius: 50px;
+    margin: 10px 0px;
+  }
+  
+
+  .dashpic img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50px;
+    margin-left: 0px;
+    padding: 0;
   }
