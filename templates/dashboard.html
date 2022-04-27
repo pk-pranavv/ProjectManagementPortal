@@ -25,26 +25,29 @@
                 </div>
             </div>
             <div class="graphdiv">
-                <canvas id="lineChart" width="900" height="400"></canvas>
+                <canvas id="Chart" width="900" height="400"></canvas>
                 <script>
-                    var ctx = document.getElementById("lineChart").getContext("2d");
+                    var ctx = document.getElementById("Chart").getContext("2d");
                     var lineChart = new Chart(ctx,{
-                        type: "line",
+                        type: "doughnut",
                         data: {
-                            labels : {{ labels | safe }},
-                            datasets:[
-                                {
-                                label: "Data points",
-                                data:{{ values | safe}},
-                                fill: false,
-                                borderColor: "rgb(75,192,192)",
-                                lineTension: 0.1
-                                }
-                            ]
+                            labels : [
+                                'Completed',
+                                'In Progress',
+                                'To-do'
+                            ],
+                            datasets: [{
+                                label: 'My First Dataset',
+                                data: [300, 50, 100],
+                                backgroundColor: [
+                                '#7ac994',
+                                '#7CD2F5',
+                                '#ff9797'
+                                ],
+                                hoverOffset: 4
+                            }]
                         },
-                        options:{
-                            responsive: false
-                        }
+                        
                     });
                 </script>
 

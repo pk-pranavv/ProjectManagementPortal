@@ -1,6 +1,6 @@
 from cProfile import label
 from crypt import methods
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect
 import os
 import login_fun
 app=Flask(__name__)
@@ -41,7 +41,7 @@ def logfun():
     password=request.form['password']
     flag=login_fun.check(user,password)
     if(flag):
-        return render_template('/dashboard.html',user=user)
+        return redirect('/dashboard')
     else:
         return render_template('/login.html',log="unsuccess")
 @app.route("/register")
@@ -54,7 +54,7 @@ def registersuccess():
     password=request.form['password']
     flag=login_fun.register(user,password)
     if(flag):
-        return render_template('/dashboard.html',user=user)
+        return redirect('/dashboard')
     else:
         return render_template('register.html')
 
