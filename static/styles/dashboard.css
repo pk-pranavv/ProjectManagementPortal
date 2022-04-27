@@ -42,6 +42,7 @@
     border-radius: 20px;
     background-color: #7CD2F5;
     top: 15;
+    margin: 0 20px;
     width: 100%;
     display: flex;
     height: 9rem;
@@ -49,15 +50,15 @@
     align-items: left;
     
   }
-  div.topcontent{
+  /* div.topcontent{
       display: flex;
       flex-direction: column;
-      margin: 0;
+      margin: 0;*/
   }
   p{
       margin-left: 1rem;
       padding: 0;
-  }
+  } 
   img{
       height: 9rem;
       width: 9rem;
