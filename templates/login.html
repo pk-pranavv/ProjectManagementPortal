@@ -8,18 +8,24 @@
     <body>
         <div class="center">
             <h1>Login</h1>
-            <form method="post">
+            {%if log=="unsuccess"%}
+                <h3>Incorrect credentials</h3>
+            {%endif%}
+            <form action="/login/success" method="post">
                 <div class="txt_field">
-                    <input type="text">
+                    <input type="text" name="user">
                     <span></span>
                     <label>Username</label>
                 </div>
                 <div class="txt_field">
-                    <input type="text">
+                    <input type="password" name="password">
                     <span></span>
                     <label>Password</label>
                 </div>
                 <input type="submit" value="Login">
+            </form>
+            <form action="/register">
+                <input type="submit" value="Register (New User)" />
             </form>
         </div>
 
