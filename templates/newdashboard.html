@@ -9,42 +9,46 @@
 <body>
     <div class="outerpage">
         <div class="webpage">
+            <div class="login">
+                Welcome, Alay
+                <img src="../static/images/person.png" alt="">
+            </div>
             <div class="sidebar">
                 <div class="dashpic" >
-                    <img src="../static/images/user.jpg" alt="1">
+                    <img src="../static/images/icons8-dashboard-60.png" alt="1">
                     <a href="/dashboard">Dashboard</a>
                 </div>
                 <div class="dashpic">
-                    <img src="../static/images/user.jpg" alt="1">
+                    <img src="../static/images/icons8-add-reminder-50.png" alt="1">
                     <a href="/tasks">My Tasks</a>
                 </div>
                 <div class="dashpic">
-                    <img src="../static/images/user.jpg" alt="1">
+                    <img src="../static/images/icons8-team-58.png" alt="1">
                     <a href="team">My Team</a>
                 </div>
                 <div class="dashpic">
-                    <img src="../static/images/user.jpg" alt="1">
+                    <img src="../static/images/icons8-add-80.png" alt="1">
                     <a href="/add">Add Task</a>
                 </div>
                 <div class="dashpic">
-                    <img src="../static/images/user.jpg" alt="1">
+                    <img src="../static/images/icons8-tasks-50.png" alt="1">
                     <a href="team">TBD</a>
                 </div>
                 <div class="dashpic">
-                    <img src="../static/images/user.jpg" alt="1">
+                    <img src="../static/images/icons8-tasks-50.png" alt="1">
                     <a href="team">TBD</a>
                 </div>
             </div>
 
             <div class="mainpage">
-
+              
                 <div class="topleft">
                     <div class="graphdiv">
                         <canvas id="Chart" width="100" height="100"></canvas>
                         <script>
                             var ctx = document.getElementById("Chart").getContext("2d");
                             var lineChart = new Chart(ctx,{
-                                type: "doughnut",
+                                type: "polarArea",
                                 data: {
                                     labels : [
                                         'Completed',
@@ -55,9 +59,9 @@
                                         label: 'My First Dataset',
                                         data: {{ values }},
                                         backgroundColor: [
-                                            '#7ac994',
-                                            '#7CD2F5',
-                                            '#ff9797'
+                                            'rgb(75, 192, 192)',
+                                            'rgb(54, 162, 235)',
+                                            'rgb(255, 99, 132)'
                                         ],
                                         hoverOffset: 4
                                     }]
