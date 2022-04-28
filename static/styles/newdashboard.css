@@ -1,8 +1,9 @@
 
 .outerpage{
     /* border: 1px solid rgb(224, 14, 154); */
+    margin: 30px 2% 30px 2%;
     height: 1200px;
-    width: 100%;
+    width: 96%;
     background-image: linear-gradient(#c7d0da,#8f9397);
     border-radius: 10px;
     padding-top: 50px;
@@ -90,13 +91,45 @@
     float: left;
     margin-right: 2%;
     background-color: white;
+    display: flex;
 }
 .graphdiv{
-    height: 100px;
-    width: 30%;
-    margin-left: 15%;
+    height: 250px;
+    width: 50%;
+    margin-left: 5%;
+    margin-top: 4%;
     }
-
+.legenddiv{
+    height: 250px;
+    padding-left: 6%;
+    padding-top: 10%;
+    width:40%;
+    margin-top: 4%;
+    top: 0;
+    float:left;
+    font-weight: bold;
+}
+.dot1 {
+    height: 25px;
+    width: 25px;
+    background-color: rgb(75, 192, 192);
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .dot2 {
+    height: 25px;
+    width: 25px;
+    background-color:rgb(54, 162, 235);
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .dot3 {
+    height: 25px;
+    width: 25px;
+    background-color:rgb(255, 99, 132);
+    border-radius: 50%;
+    display: inline-block;
+  }
 .topright{
     /* border: 1px solid black; */
     height: 300px;
@@ -124,6 +157,7 @@
     margin-right: 4%;
     border-radius: 20px;
     /* background-color: white; */
+    font-weight: bold;
 
 
 }
@@ -145,6 +179,8 @@
     margin-bottom: 20px;
     border-radius: 20px;
     background-color: white;
+    padding: 5%;
+    overflow: scroll;
 }
 
 .bottomleftdown{

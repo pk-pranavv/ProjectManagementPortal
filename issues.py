@@ -30,4 +30,11 @@ def getarray():
     print(arr)
     return arr
 
-getarray()
+def getprojects():
+    conn=sqlite3.connect('lite.db')
+    cur=conn.cursor()
+    cur.execute('select project,count(*),manager from issue group by project')
+    data=cur.fetchall()
+    print(data)
+    return data
+getprojects()

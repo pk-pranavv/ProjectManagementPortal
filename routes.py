@@ -13,7 +13,8 @@ def main():
 def dashboard():
     values=[]
     values=issues.getarray()
-    return render_template('newdashboard.html',user=user,values=values)
+    projects=issues.getprojects()
+    return render_template('newdashboard.html',user=user,values=values,projects=projects)
 
 @app.route("/add")
 def add():

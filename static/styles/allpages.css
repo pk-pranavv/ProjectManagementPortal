@@ -1,0 +1,97 @@
+
+.outerpage{
+    /* border: 1px solid rgb(224, 14, 154); */
+    height: 800px;
+    width: 90%;
+    background-image: linear-gradient(#c7d0da,#8f9397);
+    border-radius: 10px;
+    padding-top: 50px;
+    /* margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 30px;
+    margin-bottom: 20px;*/
+    margin: 40px 5%;
+} 
+
+
+
+.webpage{
+    /* border: 1px solid rgb(224, 14, 154); */
+    height: 700px;
+    width: 94%;
+    background: linear-gradient(
+        #3f008b 0%,
+        #3f008b 35%,
+        #eaeaf3 35%,
+        #eaeaf3 100%
+    );
+
+    /* margin-top: 100px; */
+    margin-left: 3%;
+    margin-top: 2px;
+    margin-right: 3% ;
+    border-radius: 25px;
+
+}
+
+.sidebar{
+  /* border: 1px solid black; */
+  height: 500px;
+  width: 18%;
+  float: left;
+  margin-top: 40px;
+  margin-left: 3%;
+  border-radius: 20px;
+  background-color: white;
+
+
+}
+.sidebar a{
+    color: black;
+    margin-right: 25px;
+    padding: 16px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.dashpic{
+    display: flex;
+    color: black;
+    border-radius: 50px;
+    margin: 10px 0;
+  }
+  
+  .dashpic img {
+    margin-left: 10%;
+    margin-top: 15px;
+    width: 30px;
+    height: 30px;
+      }
+     
+  .login img {
+    margin-left: 10%;
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+      }
+
+.mainpage{
+    /* border: 1px solid black; */
+    font-weight: bold;
+    height: 450px;
+    width: 75%;
+    float: left;
+    border-radius: 20px;
+    margin-top: 100px;
+    margin-right: 2%;
+    margin-left: 1%;
+    background-color: white;
+    padding: 0% 5%;
+}
+.login{
+    height: 50px;
+    width: 20%;
+    margin-left: 80%;
+    padding-top: 40px;
+    color: white;
+    font-weight: bold;
+}
