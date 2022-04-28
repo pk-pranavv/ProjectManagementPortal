@@ -1,9 +1,9 @@
 
 .outerpage{
     /* border: 1px solid rgb(224, 14, 154); */
-    height: 800px;
+    height: 1200px;
     width: 100%;
-    background-color: #c7d0da;
+    background-image: linear-gradient(#c7d0da,#8f9397);
     border-radius: 10px;
     padding-top: 50px;
 }
@@ -12,7 +12,7 @@
 
 .webpage{
     /* border: 1px solid rgb(224, 14, 154); */
-    height: 600px;
+    height: 1000px;
     width: 94%;
     background: linear-gradient(
         #3f008b 0%,
@@ -31,7 +31,7 @@
 
 .sidebar{
   /* border: 1px solid black; */
-  height: 500px;
+  height: 800px;
   width: 18%;
   float: left;
   margin-top: 40px;
@@ -71,7 +71,7 @@
 
 .mainpage{
     /* border: 1px solid black; */
-    height: 400px;
+    height: 800px;
     width: 75%;
     float: left;
     border-radius: 20px;
@@ -84,11 +84,11 @@
 
 .topleft{
     /* border: 1px solid black; */
-    height: 200px;
-    width: 58%;
+    height: 300px;
+    width: 70%;
     border-radius: 20px;
     float: left;
-    margin-right: 4%;
+    margin-right: 2%;
     background-color: white;
 }
 .graphdiv{
@@ -99,9 +99,9 @@
 
 .topright{
     /* border: 1px solid black; */
-    height: 200px;
-    width: 40%;
-    margin-left: 60%;
+    height: 300px;
+    width: 28%;
+    margin-left: 72%;
     border-radius: 20px;
     background-color: white;
 
@@ -117,26 +117,76 @@
 }
 .bottomleft{
     /* border: 1px solid rgb(167, 19, 19); */
-    height: 180px;
+    height: 420px;
     margin-top: 20px;
-    width: 48%;
+    width: 58%;
     float: left;
     margin-right: 4%;
     border-radius: 20px;
-    background-color: white;
+    /* background-color: white; */
 
 
 }
 
 .bottomright{
     /* border: 1px solid rgb(167, 19, 19);   */
-    height: 180px;
-    width: 50%;
-    margin-left: 50%;
+    height: 420px;
+    width: 40%;
+    margin-left: 60%;
     margin-top: 20px;
     border-radius: 20px;
     background-color: white;
+}
 
+.bottomleftup{
+    /* border: 1px solid rgb(167, 19, 19);   */
+    height: 240px;
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    background-color: white;
+}
+
+.bottomleftdown{
+    display: flex;
+    /* border: 1px solid rgb(167, 19, 19);   */
+    height: 160px;
+    width: 100%;
+    border-radius: 20px;
+
+}
+
+.btl1{
+    /* border: 1px solid rgb(167, 19, 19);   */
+    height: 160px;
+    width: 31%;
+    margin-right: 3%;
+    border-radius: 20px;
+    background-color: white;
+
+
+}
+
+.btl2 {
+    /* border: 1px solid rgb(167, 19, 19);   */
+    height: 160px;
+    width: 31%;
+    margin-right: 3%;
+    border-radius: 20px;
+    margin-left: 0.5%;
+    background-color: white;
+
+
+
+}
+
+.btl3{
+    /* border: 1px solid rgb(167, 19, 19);   */
+    height: 160px;
+    width: 31%;
+    border-radius: 20px;
+    margin-left: 0.5%;
+    background-color: white;
 
 
 }
