@@ -2,13 +2,13 @@ from flask import Flask
 import sqlite3
 conn=sqlite3.connect('lite.db')
 cur=conn.cursor()
-cur.execute("CREATE TABLE IF NOT EXISTS issues(description TEXT, assigned_to TEXT, status TEXT)")
+cur.execute("CREATE TABLE IF NOT EXISTS issue(project TEXT,issue_type TEXT,summary TEXT,description TEXT,manager TEXT, assigned_to TEXT, status TEXT)")
 conn.commit()
 conn.close()
-def addissue(description,assigned,status):
+def addissue(project,issue_type,summary,description,manager,assigned_to,status):
     conn=sqlite3.connect('lite.db')
     cur=conn.cursor()
-    cur.execute('INSERT INTO issues VALUES (?,?,?)', (description,assigned,status))
+    cur.execute('INSERT INTO issue VALUES (?,?,?,?,?,?,?)', (project,issue_type,summary,description,manager,assigned_to,status))
     conn.commit()
     conn.close()
     return True
@@ -16,13 +16,13 @@ def getarray():
     arr=[0,0,0]
     conn=sqlite3.connect('lite.db')
     cur=conn.cursor()
-    cur.execute('SELECT * FROM issues where status="completed"')
+    cur.execute('SELECT * FROM issue where status="completed"')
     data=cur.fetchall()
     arr[0]=len(data)
-    cur.execute('SELECT * FROM issues where status="inprogress"')
+    cur.execute('SELECT * FROM issue where status="inprogress"')
     data=cur.fetchall()
     arr[1]=len(data)
-    cur.execute('SELECT * FROM issues where status="todo"')
+    cur.execute('SELECT * FROM issue where status="todo"')
     data=cur.fetchall()
     arr[2]=len(data)
     conn.commit()
@@ -30,3 +30,4 @@ def getarray():
     print(arr)
     return arr
 
+getarray()

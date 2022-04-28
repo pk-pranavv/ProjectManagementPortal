@@ -1,8 +1,6 @@
-from cProfile import label
-from crypt import methods
 from flask import Flask, render_template, request, redirect
 import os
-import login_fun, issues
+import login_fun, issues, teams
 
 app=Flask(__name__)
 user=""
@@ -17,12 +15,22 @@ def dashboard():
     values=issues.getarray()
     return render_template('dashboard.html',user=user,values=values)
 
+@app.route("/add")
+def add():
+    arr=teams.getmembers()
+    man=teams.getmanagers()
+    return render_template('add.html',arr=arr,man=man)
+
 @app.route("/issueadded",methods=['POST'])
 def addissue():
-    desc=request.form['desc']
+    project=request.form['project']
+    issue=request.form['issue']
+    summary=request.form['summary']
+    desc=request.form['description']
+    manager=request.form['manager']
     ass=request.form['assigned']
     status=request.form['status']
-    issues.addissue(desc,ass,status)
+    issues.addissue(project,issue,summary,desc,manager,ass,status)
     return redirect('/dashboard')
 
 @app.route("/tasks")
@@ -31,7 +39,8 @@ def tasks():
 
 @app.route("/team")
 def team():
-    return render_template('team.html')
+    tm=teams.getmembers()
+    return render_template('team.html',team=tm)
 
 @app.route("/login")
 def login():
