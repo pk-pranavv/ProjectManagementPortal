@@ -1,0 +1,127 @@
+
+.outerpage{
+    /* border: 1px solid rgb(224, 14, 154); */
+    height: 800px;
+    width: 100%;
+    background-color: #c7d0da;
+    border-radius: 10px;
+    padding-top: 50px;
+}
+
+
+
+.webpage{
+    /* border: 1px solid rgb(224, 14, 154); */
+    height: 600px;
+    width: 94%;
+    background: linear-gradient(
+        #3f008b 0%,
+        #3f008b 35%,
+        #eaeaf3 35%,
+        #eaeaf3 100%
+    );
+
+    /* margin-top: 100px; */
+    margin-left: 3%;
+    margin-right: 3% ;
+    border-radius: 25px;
+
+}
+
+.sidebar{
+  /* border: 1px solid black; */
+  height: 500px;
+  width: 18%;
+  float: left;
+  margin-top: 40px;
+  margin-left: 3%;
+  border-radius: 20px;
+  background-color: white;
+
+
+}
+.sidebar a{
+    color: black;
+    margin-right: 25px;
+    padding: 16px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.dashpic{
+    display: flex;
+    color: black;
+    border-radius: 50px;
+    margin: 10px 0;
+  }
+  
+  .dashpic img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50px;
+  }
+
+.mainpage{
+    /* border: 1px solid black; */
+    height: 400px;
+    width: 75%;
+    float: left;
+    border-radius: 20px;
+    margin-top: 140px;
+    margin-right: 2%;
+    margin-left: 1%;
+
+}
+
+
+.topleft{
+    /* border: 1px solid black; */
+    height: 200px;
+    width: 58%;
+    border-radius: 20px;
+    float: left;
+    margin-right: 4%;
+    background-color: white;
+}
+.graphdiv{
+    height: 100px;
+    width: 30%;
+    /*margin-left: 15%;
+    margin-top: 40px; */
+  }
+
+.topright{
+    /* border: 1px solid black; */
+    height: 200px;
+    width: 40%;
+    margin-left: 60%;
+    border-radius: 20px;
+    background-color: white;
+
+
+}
+
+.bottomleft{
+    /* border: 1px solid rgb(167, 19, 19); */
+    height: 180px;
+    margin-top: 20px;
+    width: 48%;
+    float: left;
+    margin-right: 4%;
+    border-radius: 20px;
+    background-color: white;
+
+
+}
+
+.bottomright{
+    /* border: 1px solid rgb(167, 19, 19);   */
+    height: 180px;
+    width: 50%;
+    margin-left: 50%;
+    margin-top: 20px;
+    border-radius: 20px;
+    background-color: white;
+
+
+
+}
