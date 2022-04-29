@@ -35,13 +35,20 @@ def getprojects():
     cur=conn.cursor()
     cur.execute('select project,count(*),manager from issue group by project')
     data=cur.fetchall()
-    
     return data
+
 def mytasks(name):
     conn=sqlite3.connect('lite.db')
     cur=conn.cursor()
     cur.execute('select * from issue where assigned_to=(?) order by status desc',(name,))
     data=cur.fetchall()
-    
     return data
+
+def update():
+    conn=sqlite3.connect('lite.db')
+    cur=conn.cursor()
+    cur.execute('select * from issue')
+    data=cur.fetchall()
+    return data
+
 mytasks("alay")

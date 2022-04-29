@@ -51,13 +51,26 @@
                               <th scope="col">Manager</th>
                               <th scope="col">Me</th>
                               <th scope="col">Status</th>
+                              <th scope="col">Change</th>
                             </tr>
-                          </thead>
-                        {%for t in tasks%}
+                        </thead>
+                        {%for t in update%}
                         <tr>
                             {%for i in t%}
                             <td>{{i}}</td>
                             {%endfor%}
+                            <td>
+                                <form action="/change" method="post" >
+                                    <label>Status</label>
+                                    <select name="status" class="btn btn-secondary dropdown-toggle">
+                                        <option value="completed">Completed</option>
+                                        <option value="inprogress">In Progress</option>
+                                        <option value="todo">To do</option>
+                                    </select>
+                                </form>
+                                
+                            </td>
+
                         </tr>
                         {%endfor%}
                     </table>

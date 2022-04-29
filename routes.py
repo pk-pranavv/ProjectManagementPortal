@@ -1,3 +1,4 @@
+from crypt import methods
 from flask import Flask, render_template, request, redirect
 import os
 import login_fun, issues, teams
@@ -38,6 +39,18 @@ def addissue():
 def tasks():
     tasks=issues.mytasks("alay")
     return render_template('tasks.html',tasks=tasks)
+
+@app.route("/update")
+def updates():
+    return render_template('update.html',update=update)
+
+@app.route("/change", methods=['POST','GET'] )
+def updates():
+    if methods == 'POST':
+        
+    task = request.get_data
+    issues.update()
+    return redirect('/update')
 
 @app.route("/team")
 def team():
