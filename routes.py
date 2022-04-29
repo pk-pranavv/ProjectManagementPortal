@@ -36,7 +36,8 @@ def addissue():
 
 @app.route("/tasks")
 def tasks():
-    return render_template('tasks.html')
+    tasks=issues.mytasks("alay")
+    return render_template('tasks.html',tasks=tasks)
 
 @app.route("/team")
 def team():

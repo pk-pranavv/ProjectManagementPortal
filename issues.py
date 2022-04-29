@@ -37,4 +37,11 @@ def getprojects():
     data=cur.fetchall()
     print(data)
     return data
-getprojects()
+def mytasks(name):
+    conn=sqlite3.connect('lite.db')
+    cur=conn.cursor()
+    cur.execute('select * from issue where assigned_to=(?) order by status desc',(name,))
+    data=cur.fetchall()
+    print(data)
+    return data
+mytasks("alay")
