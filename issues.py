@@ -27,7 +27,7 @@ def getarray():
     arr[2]=len(data)
     conn.commit()
     conn.close()
-    print(arr)
+
     return arr
 
 def getprojects():
@@ -35,13 +35,13 @@ def getprojects():
     cur=conn.cursor()
     cur.execute('select project,count(*),manager from issue group by project')
     data=cur.fetchall()
-    print(data)
+    
     return data
 def mytasks(name):
     conn=sqlite3.connect('lite.db')
     cur=conn.cursor()
     cur.execute('select * from issue where assigned_to=(?) order by status desc',(name,))
     data=cur.fetchall()
-    print(data)
+    
     return data
 mytasks("alay")
