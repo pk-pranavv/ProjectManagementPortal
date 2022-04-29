@@ -56,68 +56,70 @@
             </div>
 
             <div class="mainpage">
-                <p>Add an Issue/Project</p>
+                <div class="formpage">
+                    <p>Add an Issue/Project</p>
+                    <div class="form-inline" id="formdiv">
+                        <form action="/issueadded" method="post" class="col-md-offset-3 col-md-6">
+                        
+                            <div class="form-inline">
+                                <label class="col-sm-2 col-form-label"> Project </label>
+                                <input type="text" name="project" />   
+                            </div>
+                       
+                            <div class="form-group">
+                                <label>Summary</label>
+                                <input type="text" name="summary" /> 
+                            </div>
 
-    <div class="form-inline" id="formdiv">
-        <form action="/issueadded" method="post" class="col-md-offset-3 col-md-6">
-        
-            <div class="form-inline">
-                <label class="col-sm-2 col-form-label"> Project </label>
-                <input type="text" name="project" />   
-            </div>
-            <br>
-            <div class="form-group">
-                <label>Issue Type</label>
-                <select name="issue" class="btn btn-secondary dropdown-toggle">
-                    <option value="story">Story</option>
-                    <option value="task">Task</option>
-                    <option value="subtask">Sub-Task</option>
-                    <option value="bug">Bug</option>
-                    <option value="epic">Epic</option>
-                </select>
-            </div>
-            <br>
-            <div class="form-group">
-                <label>Summary</label>
-                <input type="text" name="summary" /> 
-            </div>
-            <br>
-            <div class="form-group">
-                <label>Description</label>
-                <input type="text" name="description" /> 
-            </div>
-            <br>
-            <div class="form-group">
-                <label>Manager</label>
-                <select name="manager">
-                    {%for member in man%}
-                        <option value={{member[0]}}>{{member[0]}} ( {{member[2]}} )</option>
-                    {%endfor%}
-                </select>
-            </div>
-            <br>
-            <div class="form-group">
-                <label>Assign To</label>
-                <select name="assigned">
-                    {%for member in arr%}
-                        <option value={{member[0]}}>{{member[0]}} ( {{member[1]}} )</option>
-                    {%endfor%}
-                </select>
-            </div>
-            <br>
-            <div class="form-group">
-                <label>Status</label>
-                <select name="status" class="btn btn-secondary dropdown-toggle">
-                <option value="completed">Completed</option>
-                <option value="inprogress">In Progress</option>
-                <option value="todo">To do</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <input type="submit" class="btn btn-danger"/>
-            </div>
-        </form>
-    </div>
+                            <div class="form-group">
+                                <label>Description</label>
+                                <input type="text" name="description" /> 
+                            </div>
+
+                            <div class="form-group">
+                                <label>Issue Type</label>
+                                <select name="issue" class="btn btn-secondary dropdown-toggle">
+                                    <option value="story">Story</option>
+                                    <option value="task">Task</option>
+                                    <option value="subtask">Sub-Task</option>
+                                    <option value="bug">Bug</option>
+                                    <option value="epic">Epic</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Manager</label>
+                                <select name="manager">
+                                    {%for member in man%}
+                                        <option value={{member[0]}}>{{member[0]}} ( {{member[2]}} )</option>
+                                    {%endfor%}
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Assign To</label>
+                                <select name="assigned">
+                                    {%for member in arr%}
+                                        <option value={{member[0]}}>{{member[0]}} ( {{member[1]}} )</option>
+                                    {%endfor%}
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Status</label>
+                                <select name="status" class="btn btn-secondary dropdown-toggle">
+                                <option value="completed">Completed</option>
+                                <option value="inprogress">In Progress</option>
+                                <option value="todo">To do</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <input type="submit" class="btn btn-danger"/>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
