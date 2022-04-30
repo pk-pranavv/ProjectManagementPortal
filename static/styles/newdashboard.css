@@ -180,6 +180,13 @@
     margin-top: 20px;
     border-radius: 20px;
     background-color: white;
+    display: flex;
+}
+
+.velomap{
+    width: 70%;
+    height: 400px;
+    margin-left: 3% ;
 }
 
 .bottomleftup{

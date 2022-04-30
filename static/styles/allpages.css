@@ -95,3 +95,54 @@
     color: white;
     font-weight: bold;
 }
+
+
+/* CSS FOR FORM STARTS HERE */
+table{
+  /* border: 1px solid; */
+  height: 350px;
+  padding: 5px;
+  width: 100%;
+  /* margin-left: 15%; */
+  margin-top: 50px;
+  border-collapse:collapse;
+  background-color: rgba(202, 200, 45, 0.932);
+  border-radius: 20px;
+
+}
+
+td{
+  /* border: 1px solid; */
+  height: 30px;
+  padding: 5px;
+  margin: 5px;
+  border-collapse:collapse;
+  text-align: center;
+  /* width: 300px; */
+}
+
+input {
+  margin-left: 2%;
+  border-radius: 20px;
+  background-color: aquamarine;
+
+}
+
+.selectform{
+  background-color:rgb(240, 172, 108);
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.button{
+  height: 30px;
+  width: 80%;
+  background-color: rgb(16, 60, 156);
+  cursor: pointer;
+  /* margin-left: 90%; */
+}
+
+.button:hover{
+  background-color: rgb(94, 7, 22);
+  color: white;
+}

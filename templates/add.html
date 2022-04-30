@@ -41,7 +41,8 @@
             </div>
 
             <div class="mainpage">
-                <div class="formpage">
+                <!-- <div class="formpage">
+                    
                     <p>Add an Issue/Project</p>
                     <div class="form-inline" id="formdiv">
                         <form action="/issueadded" method="post" class="col-md-offset-3 col-md-6">
@@ -104,7 +105,84 @@
                             </div>
                         </form>
                     </div>
-                </div>
+                </div> -->
+                
+                <form action="/issueadded" method="post">
+                    <table>
+
+                        <tr>
+                            <td colspan="4">
+                                Enter a Issue/Project
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">
+                                Project :
+                                <input type="text" placeholder="Enter Project Name" name="name">
+                            </td>
+                        </tr>
+            
+                        <tr>
+                            <td colspan="4">
+                                Summary : 
+                                <input type="text" placeholder="Enter Summary" name="summary">
+                            </td>
+                        </tr>
+            
+                        <tr>
+                            <td colspan="4">
+                                Description : 
+                                <input type="text" name="description" placeholder="Enter Description">
+                            </td>
+                        </tr>
+            
+                        <tr>
+                            <td colspan="2">
+                                Manager :
+                                <select name="manager" class="selectform">
+                                {%for member in man%}
+                                <option value={{member[0]}}>{{member[0]}} ( {{member[2]}} )</option>
+                                {%endfor%}
+                                </select>
+                            </td>
+                            <td colspan="2">
+                                Assign To :
+                                <select name="assign to" class="selectform">
+                                {%for member in arr%}
+                                <option value={{member[0]}}>{{member[0]}} ( {{member[1]}} )</option>
+                                {%endfor%}
+                                </select>
+                            </td>
+                        </tr>
+            
+                        <tr>
+                            <td colspan="2">
+                                Issue Type :
+                                <select name="issue" class="selectform">
+                                <option value="story">Story</option>
+                                <option value="task">Task</option>
+                                <option value="subtask">Sub-Task</option>
+                                <option value="bug">Bug</option>
+                                <option value="epic">Epic</option>
+                                </select>
+                            </td>
+                            <td colspan="2">
+                                Status :
+                                <select name="status" class="selectform">
+                                <option value="completed">Completed</option>
+                                <option value="inprogress">In Progress</option>
+                                <option value="todo">To do</option>
+                                </select>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td colspan="4">
+                                <input type="submit" class="button">
+                            </td>
+                        </tr>
+                    </table>
+                </form>
             </div>
         </div>
     </div>

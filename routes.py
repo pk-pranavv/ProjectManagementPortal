@@ -40,16 +40,18 @@ def tasks():
     tasks=issues.mytasks("alay")
     return render_template('tasks.html',tasks=tasks)
 
-@app.route("/update")
+@app.route("/update",methods=['POST','GET'])
 def updates():
+    update = issues.update()
+    # print(request.form['name'])
     return render_template('update.html',update=update)
 
 @app.route("/change", methods=['POST','GET'] )
-def updates():
-    if methods == 'POST':
-        
-    task = request.get_data
-    issues.update()
+def updatess():
+    data = request.args.get('name')
+    data2 = request.args.get('status')
+    issues.change(data,data2)
+    print(data,data2)
     return redirect('/update')
 
 @app.route("/team")

@@ -60,17 +60,17 @@
                             <td>{{i}}</td>
                             {%endfor%}
                             <td>
-                                <form action="/change" method="post" >
+                                <form action="/change" method="get">
                                     <label>Status</label>
+                                    <input type="text" name="name" value={{t[0]}} /> 
                                     <select name="status" class="btn btn-secondary dropdown-toggle">
                                         <option value="completed">Completed</option>
                                         <option value="inprogress">In Progress</option>
                                         <option value="todo">To do</option>
                                     </select>
+                                    <input type="submit">
                                 </form>
-                                
                             </td>
-
                         </tr>
                         {%endfor%}
                     </table>

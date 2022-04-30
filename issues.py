@@ -33,7 +33,7 @@ def getarray():
 def getprojects():
     conn=sqlite3.connect('lite.db')
     cur=conn.cursor()
-    cur.execute('select project,count(*),manager from issue group by project')
+    cur.execute('select project,count(*),manager from issue where not status = "completed" group by project')
     data=cur.fetchall()
     return data
 
@@ -51,4 +51,13 @@ def update():
     data=cur.fetchall()
     return data
 
-mytasks("alay")
+def change(name, status):
+    conn=sqlite3.connect('lite.db')
+    cur=conn.cursor()
+    cur.execute('update issue set status = (?) where project = (?)',(status,name))
+    conn.commit()
+    cur.close()
+    
+
+# mytasks("alay")
+# change('Jira','completed')
