@@ -2,8 +2,9 @@ from select import select
 from flask import Flask
 import sqlite3
 conn=sqlite3.connect('lite.db')
+
 cur=conn.cursor()
-cur.execute("CREATE TABLE IF NOT EXISTS issue(srno SERIAL PRIMARY KEY,project TEXT,issue_type TEXT,summary TEXT,description TEXT,manager TEXT, assigned_to TEXT, status TEXT,priority text)")
+cur.execute("CREATE TABLE IF NOT EXISTS issue(srno INTEGER PRIMARY KEY AUTOINCREMENT,project TEXT,issue_type TEXT,summary TEXT,description TEXT,manager TEXT, assigned_to TEXT, status TEXT,priority text)")
 conn.commit()
 conn.close()
 def addissue(project,issue_type,summary,description,manager,assigned_to,status,priority):
@@ -48,14 +49,14 @@ def mytasks(name):
 def update():
     conn=sqlite3.connect('lite.db')
     cur=conn.cursor()
-    cur.execute('select * from issue')
+    cur.execute('select srno, project,summary,status from issue')
     data=cur.fetchall()
     return data
 
 def change(name, status):
     conn=sqlite3.connect('lite.db')
     cur=conn.cursor()
-    cur.execute('update issue set status = (?) where project = (?)',(status,name))
+    cur.execute('update issue set status = (?) where srno = (?)',(status,name))
     conn.commit()
     cur.close()
 def getprojectname():

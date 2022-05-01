@@ -52,12 +52,10 @@
                     <table class="table">
                         <thead>
                             <tr>
-                              <th scope="col">Project Name</th>
-                              <th scope="col">Type</th>
-                              <th scope="col">Summary</th>
-                              <th scope="col">Description</th>
-                              <th scope="col">Manager</th>
-                              <th scope="col">Me</th>
+                                <th scope="col">No</th>
+                              <th scope="col">Project</th>
+                              
+                              <th scope="col">Issue</th>
                               <th scope="col">Status</th>
                               <th scope="col">Change</th>
                             </tr>
@@ -69,8 +67,8 @@
                             {%endfor%}
                             <td>
                                 <form action="/change" method="get">
-                                    <label>Status</label>
-                                    <input type="text" name="name" value={{t[0]}} /> 
+                                    
+                                    <input hidden type="text" name="name" value={{t[0]}} /> 
                                     <select name="status" class="btn btn-secondary dropdown-toggle">
                                         <option value="completed">Completed</option>
                                         <option value="inprogress">In Progress</option>

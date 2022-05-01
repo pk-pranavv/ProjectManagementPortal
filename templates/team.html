@@ -67,6 +67,16 @@
                     </tr>
                     {%endfor%}
                 </table>
+                <form action="/addteam" method="post">
+                    <label for="name">Name</label>
+                    <input type="text" name="name">
+                    <label for="profile">Profile</label>
+                    <input type="text" name="profile">
+                    <label for="summary">Skills/Summary</label>
+                    <input type="text" name="summary">
+                    <input type="submit">
+
+                </form>
             </div>
         </div>
     </div>

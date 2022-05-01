@@ -69,6 +69,14 @@ def team():
     tm=teams.getmembers()
     return render_template('team.html',team=tm)
 
+@app.route("/addteam", methods=['POST'])
+def addteam():
+    name=request.form['name']
+    profile=request.form['profile']
+    summary=request.form['summary']
+    teams.addmember(name,profile,summary)
+    return redirect('/team')
+
 @app.route("/login")
 def login():
     return render_template('login.html')
@@ -100,6 +108,12 @@ def registersuccess():
 @app.route('/createmeet')
 def redirect_to_link():
     return redirect('https://meet.google.com/new')
+@app.route('/joinmeet')
+def redirect_to_link2():
+    return redirect('https://meet.google.com')
+@app.route('/schedulemeet')
+def redirect_to_link3():
+    return redirect('https://meet.google.com')
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
