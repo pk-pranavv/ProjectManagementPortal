@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<head>
+    <title>Add Team Member</title>
+    <link rel="stylesheet" href="../static/styles/allpages.css">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/newdashboard.css') }}">
+</head>
+
+
+<body>
+    <div class="outerpage">
+        <div class="webpage">
+            <div class="login">
+                Welcome, Alay
+                <img src="../static/images/person.png" alt="">
+            </div>
+            <div class="sidebar">
+                <div class="dashpic" >
+                    <img src="../static/images/icons8-dashboard-60.png" alt="1">
+                    <a href="/dashboard">Dashboard</a>
+                </div>
+                <div class="dashpic">
+                    <img src="../static/images/icons8-add-reminder-50.png" alt="1">
+                    <a href="/tasks">My Tasks</a>
+                </div>
+                <div class="dashpic">
+                    <img src="../static/images/icons8-team-58.png" alt="1">
+                    <a href="team">My Team</a>
+                </div>
+                <div class="dashpic">
+                    <img src="../static/images/icons8-add-80.png" alt="1">
+                    <a href="/add">Add Task</a>
+                </div>
+                <div class="dashpic">
+                    <img src="../static/images/icons8-tasks-50.png" alt="1">
+                    <a href="/update">Update Task</a>
+                </div>
+                <div class="dashpic">
+                    <img src="../static/images/icons8-tasks-50.png" alt="1">
+                    <a href="/login">Logout</a>
+                </div>
+            </div>
+
+            <div class="mainpage">
+                
+                <form action="/issueadded" method="post">
+                    <table>
+
+                        <tr>
+                            <td colspan="4">
+                                Team Member Details
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">
+                                Name :
+                                <input type="text" placeholder="Enter Project Name" name="project">
+                            </td>
+                        </tr>
+            
+                        <tr>
+                            <td colspan="4">
+                                Profile : 
+                                <input type="text" placeholder="Enter Summary" name="summary">
+                            </td>
+                        </tr>
+            
+                        <tr>
+                            <td colspan="4">
+                                Summary : 
+                                <input type="text" name="description" placeholder="Enter Description">
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td colspan="4">
+                                <input type="submit" class="button">
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

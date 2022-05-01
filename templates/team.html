@@ -14,6 +14,9 @@
                 Welcome, Alay
                 <img src="../static/images/person.png" alt="">
             </div>
+            <div class="logo">
+                <img id="logoimg" src="../static/images/logo.png" alt="logo">
+            </div>
             <div class="sidebar">
                 <div class="dashpic" >
                     <img src="../static/images/icons8-dashboard-60.png" alt="1">
@@ -40,20 +43,32 @@
                     <a href="/chat">Chat</a>
                 </div>
                 <div class="dashpic">
-                    <img src="../static/images/icons8-logout-rounded-left-50.png" alt="1">
-                    <a href="/calendar">Logout</a>
+                    <img src="../static/images/icons8-tasks-50.png" alt="1">
+                    <a href="/calendar">Calendar</a>
                 </div>
                 <div class="dashpic">
-                    <img src="../static/images/icons8-tasks-50.png" alt="1">
+                    <img src="../static/images/icons8-logout-rounded-left-50.png" alt="1">
                     <a href="/login">Logout</a>
                 </div>
+                
             </div>
 
             <div class="mainpage">
+                <p id="teamform">Add Team Member :</p>
+                <form action="/addteam" method="post" >
+                    <label for="name">Name</label>
+                    <input type="text" name="name">
+                    <label for="profile">Profile</label>
+                    <input type="text" name="profile">
+                    <label for="summary">Skills/Summary</label>
+                    <input type="text" name="summary">
+                    <input type="submit">
+
+                </form>
 
                 <table class="table">
                     <thead>
-                        <tr>
+                        <tr style="text-align: center">
                           <th scope="col">Name</th>
                           <th scope="col">Profile</th>
                           <th scope="col">Summary</th>
@@ -67,16 +82,7 @@
                     </tr>
                     {%endfor%}
                 </table>
-                <form action="/addteam" method="post">
-                    <label for="name">Name</label>
-                    <input type="text" name="name">
-                    <label for="profile">Profile</label>
-                    <input type="text" name="profile">
-                    <label for="summary">Skills/Summary</label>
-                    <input type="text" name="summary">
-                    <input type="submit">
-
-                </form>
+               
             </div>
         </div>
     </div>

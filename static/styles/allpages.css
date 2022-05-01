@@ -1,7 +1,7 @@
 
 .outerpage{
     /* border: 1px solid rgb(224, 14, 154); */
-    height: 800px;
+    height: 1000px;
     width: 90%;
     background-image: linear-gradient(#c7d0da,#8f9397);
     border-radius: 10px;
@@ -17,7 +17,7 @@
 
 .webpage{
     /* border: 1px solid rgb(224, 14, 154); */
-    height: 700px;
+    height: 900px;
     width: 94%;
     background: linear-gradient(
         #3f008b 0%,
@@ -36,7 +36,7 @@
 
 .sidebar{
   /* border: 1px solid black; */
-  height: 500px;
+  height: 700px;
   width: 18%;
   float: left;
   margin-top: 40px;
@@ -77,7 +77,7 @@
 .mainpage{
     /* border: 1px solid black; */
     font-weight: bold;
-    height: 450px;
+    height: 600px;
     width: 75%;
     float: left;
     border-radius: 20px;
@@ -98,14 +98,15 @@
 }
 
 
+
 /* CSS FOR FORM STARTS HERE */
 table{
   /* border: 1px solid; */
-  height: 350px;
+  /* height: 350px; */
   padding: 5px;
   width: 100%;
   /* margin-left: 15%; */
-  margin-top: 50px;
+  margin-top: 75px;
   border-collapse:collapse;
   background-color: rgba(202, 200, 45, 0.932);
   border-radius: 20px;
@@ -146,4 +147,17 @@ input {
 .button:hover{
   background-color: rgb(94, 7, 22);
   color: white;
+}
+
+.logo{
+  margin-left: 35%;
+  margin-bottom: 10px;
+  /* margin-top: 100px; */
+}
+#logoimg{
+  border-radius: 30px;
+}
+
+#teamform{
+  margin-top: 50px;
 }

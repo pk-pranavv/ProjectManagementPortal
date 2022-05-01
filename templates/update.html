@@ -39,20 +39,21 @@
                         <a href="/chat">Chat</a>
                     </div>
                     <div class="dashpic">
-                        <img src="../static/images/icons8-logout-rounded-left-50.png" alt="1">
-                        <a href="/calendar">Logout</a>
+                        <img src="../static/images/icons8-tasks-50.png" alt="1">
+                        <a href="/calendar">calendar</a>
                     </div>
                     <div class="dashpic">
-                        <img src="../static/images/icons8-tasks-50.png" alt="1">
+                        <img src="../static/images/icons8-logout-rounded-left-50.png" alt="1">
                         <a href="/login">Logout</a>
                     </div>
+                    
                 </div>
     
                 <div class="mainpage">
                     <table class="table">
                         <thead>
-                            <tr>
-                                <th scope="col">No</th>
+                            <tr style="text-align: center"> 
+                              <th scope="col">No</th>
                               <th scope="col">Project</th>
                               
                               <th scope="col">Issue</th>
@@ -69,7 +70,7 @@
                                 <form action="/change" method="get">
                                     
                                     <input hidden type="text" name="name" value={{t[0]}} /> 
-                                    <select name="status" class="btn btn-secondary dropdown-toggle">
+                                    <select name="status" class="button">
                                         <option value="completed">Completed</option>
                                         <option value="inprogress">In Progress</option>
                                         <option value="todo">To do</option>
