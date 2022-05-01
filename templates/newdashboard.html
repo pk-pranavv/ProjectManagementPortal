@@ -36,16 +36,27 @@
                     <a href="/update">Update Task</a>
                 </div>
                 <div class="dashpic">
-                    <img src="../static/images/icons8-tasks-50.png" alt="1">
+                    <img src="../static/images/icons8-calendar-50.png" alt="1">
+                    <a href="/calendar">My Calendar</a>
+                </div>
+                <div class="dashpic">
+                    <img src="../static/images/icons8-chat-50.png" alt="1">
+                    <a href="/chat">Chat</a>
+                </div>
+                <div class="dashpic">
+                    <img src="../static/images/icons8-logout-rounded-left-50.png" alt="1">
                     <a href="/login">Logout</a>
                 </div>
             </div>
 
             <div class="mainpage">
               
+                <div class="logo">
+                    <img id="logoimg" src="../static/images/logo.png" alt="logo">
+                </div>
                 <div class="topleft">
                     <div class="graphdiv">
-                        <canvas id="Chart" width="200" height="150"></canvas>
+                        <canvas id="Chart" width="200" height="170"></canvas>
                         <script>
                             var ctx = document.getElementById("Chart").getContext("2d");
                             var lineChart = new Chart(ctx,{
@@ -89,12 +100,13 @@
                 </div>
 
                 <div class="topright">
+                    <br>
                     <p>High Priority issues:</p>
                     <table class="table">
                         <thead>
                             <tr>
                                 <th>Project Name</th>
-                                <th>Manager</th>
+                                <th>Issue</th>
                             </tr>
                         </thead>
                         {% for pro in prioritydata %}
@@ -130,48 +142,38 @@
                     </div>
 
                     <div class="bottomleftdown">
-
                         <div class="btl1">
                             <form action="/createmeet">
                                 <table>
                                     <tr>
-                                        <td colspan="3">create a meeting</td>
-                                    </tr>
-                                    <tr>
                                         <td>
-                                            <td><input type="submit" value="Click Here"></td>
+                                            <td><input type="submit" value="Create meet" class="tablebutton"></td>
                                         </td>
                                     </tr>
                                 </table>
                             </form>
                         </div>
-
                         <div class="btl2">
-                            <form action="/joinmeet">   
+                            <form action="/joinmeet">
                                 <table>
                                     <tr>
                                         <td>
-                                            Join a meet
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input type="text" name="meetid" placeholder="Enter meeting code">
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input type="submit" value="Click Here">
+                                            <input type="submit" value="Join Meet" class="tablebutton">
                                         </td>
                                     </tr>
                                 </table>
                             </form>
-
-
                         </div>
                         <div class="btl3">
-                            <br>
-                            <p>Add stakeholders (pranav)</p>
+                            <form action="/joinmeet">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <input type="submit" value="Schedule Meet" class="tablebutton">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -179,7 +181,7 @@
                 <div class="bottomright">
                     <div class="velomap">
 
-                        <canvas id="velocitychart" height="100" width="100"></canvas>
+                        <canvas id="velocitychart" height="50" width="50"></canvas>
                         
                         <script>
                             var canelement = document.getElementById("velocitychart");

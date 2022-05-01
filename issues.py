@@ -3,7 +3,6 @@ from flask import Flask
 import sqlite3
 conn=sqlite3.connect('lite.db')
 cur=conn.cursor()
-cur.execute("drop table issue")
 cur.execute("CREATE TABLE IF NOT EXISTS issue(srno SERIAL PRIMARY KEY,project TEXT,issue_type TEXT,summary TEXT,description TEXT,manager TEXT, assigned_to TEXT, status TEXT,priority text)")
 conn.commit()
 conn.close()
@@ -76,7 +75,7 @@ def getprojectname():
 def gethighpriorityissue():
     conn=sqlite3.connect('lite.db')
     cur=conn.cursor()
-    cur.execute('select project, manager from issue where priority = "high" and not status = "completed"')
+    cur.execute('select project, summary from issue where priority = "high" and not status = "completed" order by project')
     data=cur.fetchall()
     return data
 

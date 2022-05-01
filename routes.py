@@ -57,6 +57,12 @@ def updatess():
     issues.change(data,data2)
     print(data,data2)
     return redirect('/update')
+@app.route("/chat")
+def chats():
+    return render_template("chat.html")
+@app.route("/calendar")
+def calendar():
+    return render_template('chat.html')
 
 @app.route("/team")
 def team():
