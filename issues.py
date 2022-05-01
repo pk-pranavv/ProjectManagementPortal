@@ -1,3 +1,4 @@
+from select import select
 from flask import Flask
 import sqlite3
 conn=sqlite3.connect('lite.db')
@@ -72,6 +73,12 @@ def getprojectname():
     cur.close()
     return data1
 
+def gethighpriorityissue():
+    conn=sqlite3.connect('lite.db')
+    cur=conn.cursor()
+    cur.execute('select project, manager from issue where priority = "high" and not status = "completed"')
+    data=cur.fetchall()
+    return data
 
 # mytasks("alay")
 # change('Jira','completed')

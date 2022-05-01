@@ -17,7 +17,8 @@ def dashboard():
     projects=issues.getprojects()
     allprojects=[]
     allprojects=issues.getprojectname()
-    return render_template('newdashboard.html',user=user,values=values,projects=projects,allprojects=allprojects)
+    prioritydata = issues.gethighpriorityissue()
+    return render_template('newdashboard.html',user=user,values=values,projects=projects,allprojects=allprojects, prioritydata=prioritydata)
 
 @app.route("/add")
 def add():
@@ -88,6 +89,11 @@ def registersuccess():
         return redirect('/dashboard')
     else:
         return render_template('register.html')
+
+
+@app.route('/createmeet')
+def redirect_to_link():
+    return redirect('https://meet.google.com/new')
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))

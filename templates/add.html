@@ -46,33 +46,33 @@
                     <table>
 
                         <tr>
-                            <td colspan="4">
+                            <td colspan="6">
                                 Enter a Issue/Project
                             </td>
                         </tr>
                         <tr>
-                            <td colspan="4">
+                            <td colspan="6">
                                 Project :
                                 <input type="text" placeholder="Enter Project Name" name="project">
                             </td>
                         </tr>
             
                         <tr>
-                            <td colspan="4">
+                            <td colspan="6">
                                 Summary : 
                                 <input type="text" placeholder="Enter Summary" name="summary">
                             </td>
                         </tr>
             
                         <tr>
-                            <td colspan="4">
+                            <td colspan="6">
                                 Description : 
                                 <input type="text" name="description" placeholder="Enter Description">
                             </td>
                         </tr>
             
                         <tr>
-                            <td colspan="2">
+                            <td colspan="3">
                                 Manager :
                                 <select name="manager" class="selectform">
                                 {%for member in man%}
@@ -80,7 +80,7 @@
                                 {%endfor%}
                                 </select>
                             </td>
-                            <td colspan="2">
+                            <td colspan="3">
                                 Assign To :
                                 <select name="assigned" class="selectform">
                                 {%for member in arr%}
@@ -110,7 +110,7 @@
                                 </select>
                             </td>
                             <td colspan="2">
-                                Status :
+                                Priority :
                                 <select name="priority" class="selectform">
                                 <option value="high">High</option>
                                 <option value="medium">Medium</option>
@@ -120,7 +120,7 @@
                         </tr>
                         
                         <tr>
-                            <td colspan="4">
+                            <td colspan="6">
                                 <input type="submit" class="button">
                             </td>
                         </tr>

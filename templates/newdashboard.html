@@ -89,9 +89,24 @@
                 </div>
 
                 <div class="topright">
-                    <br>
-                    <p>Display High priority issues</p>
+                    <p>High Priority issues:</p>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Project Name</th>
+                                <th>Manager</th>
+                            </tr>
+                        </thead>
+                        {% for pro in prioritydata %}
+                            <tr>
+                                {%for p in pro%}
+                                    <td>{{p}}</td>
+                                {%endfor%}
+                            </tr>
+                        {%endfor%}
+                    </table>
                 </div>
+
                 <div class="bottom">
                 <div class="bottomleft">
                     <div class="bottomleftup">
@@ -115,13 +130,43 @@
                     </div>
 
                     <div class="bottomleftdown">
+
                         <div class="btl1">
-                            <br>
-                            <p>Add stakeholders (pranav)</p>
+                            <form action="/createmeet">
+                                <table>
+                                    <tr>
+                                        <td colspan="3">create a meeting</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <td><input type="submit" value="Click Here"></td>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </form>
                         </div>
+
                         <div class="btl2">
-                            <br>
-                            <p>Add stakeholders (pranav)</p>
+                            <form action="/joinmeet">   
+                                <table>
+                                    <tr>
+                                        <td>
+                                            Join a meet
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="text" name="meetid" placeholder="Enter meeting code">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="submit" value="Click Here">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </form>
+
 
                         </div>
                         <div class="btl3">

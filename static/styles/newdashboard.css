@@ -215,8 +215,17 @@
     margin-right: 3%;
     border-radius: 20px;
     background-color: white;
+    /* background-image: url('../images/meet.png');
+     background-size:contain;
+    background-repeat: no-repeat; */
+    padding-left: 5%;
+    /* padding-top: 60px; */
 
+}
 
+.btl1 button{
+    margin-top: 10px;
+    border-radius: 15px;
 }
 
 .btl2 {
@@ -226,10 +235,19 @@
     margin-right: 3%;
     border-radius: 20px;
     margin-left: 0.5%;
+    /* background-image: url('../images/meet.png');
+    background-size:contain;
+    background-repeat: no-repeat; */
     background-color: white;
+    padding-left: 5%;
+    /* padding-top: 60px; */
+    overflow: hidden;
+    padding-right: 5px;
+}
 
-
-
+.btl2 button{
+    margin-top: 10px;
+    border-radius: 15px;
 }
 
 .btl3{
