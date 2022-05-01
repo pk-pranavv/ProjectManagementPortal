@@ -4,7 +4,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/6884e3f1ae.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <title>DashBoard</title>
 </head>
@@ -26,7 +25,7 @@
                 </div>
                 <div class="dashpic">
                     <img src="../static/images/icons8-team-58.png" alt="1">
-                    <a href="/team">My Team</a>
+                    <a href="team">My Team</a>
                 </div>
                 <div class="dashpic">
                     <img src="../static/images/icons8-add-80.png" alt="1">
@@ -34,7 +33,7 @@
                 </div>
                 <div class="dashpic">
                     <img src="../static/images/icons8-tasks-50.png" alt="1">
-                    <a href="update">Update Task</a>
+                    <a href="/update">Update Task</a>
                 </div>
                 <div class="dashpic">
                     <img src="../static/images/icons8-tasks-50.png" alt="1">
@@ -46,7 +45,7 @@
               
                 <div class="topleft">
                     <div class="graphdiv">
-                        <canvas id="Chart" width="100" height="100"></canvas>
+                        <canvas id="Chart" width="200" height="150"></canvas>
                         <script>
                             var ctx = document.getElementById("Chart").getContext("2d");
                             var lineChart = new Chart(ctx,{
@@ -58,7 +57,6 @@
                                         'To-do'
                                         ],
                                     datasets: [{
-                                        label: 'My First Dataset',
                                         data: {{ values }},
                                         backgroundColor: [
                                             'rgb(75, 192, 192)',
@@ -94,7 +92,7 @@
                     <br>
                     <p>Display High priority issues</p>
                 </div>
-
+                <div class="bottom">
                 <div class="bottomleft">
                     <div class="bottomleftup">
                         <p>Ongoing Projects:</p>
@@ -133,61 +131,66 @@
                     </div>
                 </div>
 
-            
-
                 <div class="bottomright">
                     <div class="velomap">
+
                         <canvas id="velocitychart" height="100" width="100"></canvas>
+                        
                         <script>
                             var canelement = document.getElementById("velocitychart");
                             var config = {
                                 type: 'bar',
                                 data: {
-                                    labels: ["A","B","C"],
+                                    labels: ["a","b","c","d"],
                                     datasets: [
                                         {
-                                            label: "Total Functions",
-                                            data: [2,4,6],
+                                            label: "Total Issues",
+                                            data: [6,7,6,4],
                                             backgroundColor: [
-                                            'rgba(255, 99, 132, 0.2)',
-                                            'rgba(255, 159, 64, 0.2)',
-                                            'rgba(255, 205, 86, 0.2)',
-                                            
-                                            ],
-                                            borderColor: [
                                             'rgb(255, 99, 132)',
-                                            'rgb(255, 159, 64)',
-                                            'rgb(255, 205, 86)',
+                                            'rgb(255, 99, 132)',
+                                            'rgb(255, 99, 132)',
+                                            'rgb(255, 99, 132)'
                                             
                                             ],
                                         },
                                         {
-                                            label: "Total Functions",
-                                            data: [2,4,6],
+                                            label: "Completed",
+                                            data: [6,6,6,4],
                                             backgroundColor: [
-                                            'rgba(255, 99, 132, 0.2)',
-                                            'rgba(255, 159, 64, 0.2)',
-                                            'rgba(255, 205, 86, 0.2)',
-                                            
-                                            ],
-                                            borderColor: [
-                                            'rgb(255, 99, 132)',
-                                            'rgb(255, 159, 64)',
-                                            'rgb(255, 205, 86)',
+                                            'rgb(75, 192, 192)',
+                                            'rgb(75, 192, 192)',
+                                            'rgb(75, 192, 192)',
+                                            'rgb(75, 192, 192)'
+
                                             
                                             ],
                                         }
                                     ]
+                                },
+                                options: {
+                                    scales: {
+                                        yAxes:[{
+                                            ticks:{
+                                                beginAtZero:true
+                                            }
+                                        }]
+                                    },
+
                                 }
+                                
                             }
+                            
+                            
 
                             var cookiechart = new Chart(canelement, config);
                         </script> 
                     </div>
                 </div>
+                </div>
+
             </div>
         </div>
-
     </div>
 </body>
 </html>

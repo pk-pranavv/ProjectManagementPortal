@@ -80,7 +80,6 @@
     margin-top: 100px;
     margin-right: 2%;
     margin-left: 1%;
-    overflow: scroll;
     /* padding-left: 10%; */
 }
 
@@ -162,7 +161,7 @@
     /* border: 1px solid rgb(167, 19, 19); */
     height: 420px;
     margin-top: 20px;
-    width: 58%;
+    width: 50%;
     float: left;
     margin-right: 4%;
     border-radius: 20px;
@@ -171,23 +170,22 @@
 
 
 }
-
+.bottom{
+    display: flex;
+}
 .bottomright{
     /* border: 1px solid rgb(167, 19, 19);   */
     height: 420px;
-    width: 40%;
-    margin-left: 60%;
-    margin-top: 20px;
+    width: 46%;
     border-radius: 20px;
     background-color: white;
-    display: flex;
+    display: inline-block;
+    margin-top: 20px;
 }
-
 .velomap{
-    width: 70%;
-    height: 400px;
-    margin-left: 3% ;
-}
+    height: 420px;
+
+    }
 
 .bottomleftup{
     /* border: 1px solid rgb(167, 19, 19);   */
@@ -244,4 +242,3 @@
 
 
 }
-

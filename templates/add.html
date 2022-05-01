@@ -32,7 +32,7 @@
                 </div>
                 <div class="dashpic">
                     <img src="../static/images/icons8-tasks-50.png" alt="1">
-                    <a href="team">Update Task</a>
+                    <a href="/update">Update Task</a>
                 </div>
                 <div class="dashpic">
                     <img src="../static/images/icons8-tasks-50.png" alt="1">
@@ -41,71 +41,6 @@
             </div>
 
             <div class="mainpage">
-                <!-- <div class="formpage">
-                    
-                    <p>Add an Issue/Project</p>
-                    <div class="form-inline" id="formdiv">
-                        <form action="/issueadded" method="post" class="col-md-offset-3 col-md-6">
-                        
-                            <div class="form-inline">
-                                <label class="col-sm-2 col-form-label"> Project </label>
-                                <input type="text" name="project" />   
-                            </div>
-                       
-                            <div class="form-group">
-                                <label>Summary</label>
-                                <input type="text" name="summary" /> 
-                            </div>
-
-                            <div class="form-group">
-                                <label>Description</label>
-                                <input type="text" name="description" /> 
-                            </div>
-
-                            <div class="form-group">
-                                <label>Issue Type</label>
-                                <select name="issue" class="btn btn-secondary dropdown-toggle">
-                                    <option value="story">Story</option>
-                                    <option value="task">Task</option>
-                                    <option value="subtask">Sub-Task</option>
-                                    <option value="bug">Bug</option>
-                                    <option value="epic">Epic</option>
-                                </select>
-                            </div>
-
-                            <div class="form-group">
-                                <label>Manager</label>
-                                <select name="manager">
-                                    {%for member in man%}
-                                        <option value={{member[0]}}>{{member[0]}} ( {{member[2]}} )</option>
-                                    {%endfor%}
-                                </select>
-                            </div>
-
-                            <div class="form-group">
-                                <label>Assign To</label>
-                                <select name="assigned">
-                                    {%for member in arr%}
-                                        <option value={{member[0]}}>{{member[0]}} ( {{member[1]}} )</option>
-                                    {%endfor%}
-                                </select>
-                            </div>
-
-                            <div class="form-group">
-                                <label>Status</label>
-                                <select name="status" class="btn btn-secondary dropdown-toggle">
-                                <option value="completed">Completed</option>
-                                <option value="inprogress">In Progress</option>
-                                <option value="todo">To do</option>
-                                </select>
-                            </div>
-                            
-                            <div class="form-group">
-                                <input type="submit" class="btn btn-danger"/>
-                            </div>
-                        </form>
-                    </div>
-                </div> -->
                 
                 <form action="/issueadded" method="post">
                     <table>
@@ -118,7 +53,7 @@
                         <tr>
                             <td colspan="4">
                                 Project :
-                                <input type="text" placeholder="Enter Project Name" name="name">
+                                <input type="text" placeholder="Enter Project Name" name="project">
                             </td>
                         </tr>
             
@@ -147,7 +82,7 @@
                             </td>
                             <td colspan="2">
                                 Assign To :
-                                <select name="assign to" class="selectform">
+                                <select name="assigned" class="selectform">
                                 {%for member in arr%}
                                 <option value={{member[0]}}>{{member[0]}} ( {{member[1]}} )</option>
                                 {%endfor%}
@@ -172,6 +107,14 @@
                                 <option value="completed">Completed</option>
                                 <option value="inprogress">In Progress</option>
                                 <option value="todo">To do</option>
+                                </select>
+                            </td>
+                            <td colspan="2">
+                                Status :
+                                <select name="priority" class="selectform">
+                                <option value="high">High</option>
+                                <option value="medium">Medium</option>
+                                <option value="low">Low</option>
                                 </select>
                             </td>
                         </tr>

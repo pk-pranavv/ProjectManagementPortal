@@ -15,7 +15,9 @@ def dashboard():
     values=[]
     values=issues.getarray()
     projects=issues.getprojects()
-    return render_template('newdashboard.html',user=user,values=values,projects=projects)
+    allprojects=[]
+    allprojects=issues.getprojectname()
+    return render_template('newdashboard.html',user=user,values=values,projects=projects,allprojects=allprojects)
 
 @app.route("/add")
 def add():
@@ -32,7 +34,8 @@ def addissue():
     manager=request.form['manager']
     ass=request.form['assigned']
     status=request.form['status']
-    issues.addissue(project,issue,summary,desc,manager,ass,status)
+    priority=request.form['priority']
+    issues.addissue(project,issue,summary,desc,manager,ass,status,priority)
     return redirect('/dashboard')
 
 @app.route("/tasks")
@@ -40,7 +43,7 @@ def tasks():
     tasks=issues.mytasks("alay")
     return render_template('tasks.html',tasks=tasks)
 
-@app.route("/update",methods=['POST','GET'])
+@app.route("/update")
 def updates():
     update = issues.update()
     # print(request.form['name'])

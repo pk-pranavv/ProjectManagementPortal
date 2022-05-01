@@ -2,13 +2,14 @@ from flask import Flask
 import sqlite3
 conn=sqlite3.connect('lite.db')
 cur=conn.cursor()
-cur.execute("CREATE TABLE IF NOT EXISTS issue(project TEXT,issue_type TEXT,summary TEXT,description TEXT,manager TEXT, assigned_to TEXT, status TEXT)")
+cur.execute("drop table issue")
+cur.execute("CREATE TABLE IF NOT EXISTS issue(srno SERIAL PRIMARY KEY,project TEXT,issue_type TEXT,summary TEXT,description TEXT,manager TEXT, assigned_to TEXT, status TEXT,priority text)")
 conn.commit()
 conn.close()
-def addissue(project,issue_type,summary,description,manager,assigned_to,status):
+def addissue(project,issue_type,summary,description,manager,assigned_to,status,priority):
     conn=sqlite3.connect('lite.db')
     cur=conn.cursor()
-    cur.execute('INSERT INTO issue VALUES (?,?,?,?,?,?,?)', (project,issue_type,summary,description,manager,assigned_to,status))
+    cur.execute('INSERT INTO issue (project,issue_type,summary,description,manager,assigned_to,status,priority) VALUES (?,?,?,?,?,?,?,?)', (project,issue_type,summary,description,manager,assigned_to,status,priority))
     conn.commit()
     conn.close()
     return True
@@ -27,7 +28,7 @@ def getarray():
     arr[2]=len(data)
     conn.commit()
     conn.close()
-
+    print(arr)
     return arr
 
 def getprojects():
@@ -57,7 +58,20 @@ def change(name, status):
     cur.execute('update issue set status = (?) where project = (?)',(status,name))
     conn.commit()
     cur.close()
+def getprojectname():
+    conn=sqlite3.connect('lite.db')
+    cur=conn.cursor()
+    cur.execute('select distinct(project) from issue order by project')
+    data=cur.fetchall()
     
+    data1=[]
+    for i in data:
+        data1.append(i[0])
+    print(data1)
+    conn.commit()
+    cur.close()
+    return data1
+
 
 # mytasks("alay")
 # change('Jira','completed')
