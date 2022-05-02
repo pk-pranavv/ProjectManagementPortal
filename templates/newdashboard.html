@@ -188,27 +188,21 @@
                             var config = {
                                 type: 'bar',
                                 data: {
-                                    labels: ["a","b","c","d"],
                                     datasets: [
                                         {
                                             label: "Total Issues",
-                                            data: [6,7,6,4],
+                                            data: {{first}},
                                             backgroundColor: [
-                                            'rgb(255, 99, 132)',
-                                            'rgb(255, 99, 132)',
-                                            'rgb(255, 99, 132)',
-                                            'rgb(255, 99, 132)'
+                                            "rgb(255, 99, 132)",
+                                            
                                             
                                             ],
                                         },
                                         {
                                             label: "Completed",
-                                            data: [6,6,6,4],
+                                            data: {{second}},
                                             backgroundColor: [
-                                            'rgb(75, 192, 192)',
-                                            'rgb(75, 192, 192)',
-                                            'rgb(75, 192, 192)',
-                                            'rgb(75, 192, 192)'
+                                            "rgb(75, 192, 192)",
 
                                             
                                             ],

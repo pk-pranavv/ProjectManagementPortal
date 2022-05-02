@@ -18,7 +18,10 @@ def dashboard():
     allprojects=[]
     allprojects=issues.getprojectname()
     prioritydata = issues.gethighpriorityissue()
-    return render_template('newdashboard.html',user=user,values=values,projects=projects,allprojects=allprojects, prioritydata=prioritydata)
+    first,second=issues.velochart()
+    print(first)
+    print(second)
+    return render_template('newdashboard.html',user=user,values=values,projects=projects,allprojects=allprojects, prioritydata=prioritydata,first=first,second=second)
 
 @app.route("/add")
 def add():

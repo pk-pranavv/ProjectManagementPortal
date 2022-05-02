@@ -80,5 +80,24 @@ def gethighpriorityissue():
     data=cur.fetchall()
     return data
 
+
+
+def velochart():
+    conn=sqlite3.connect('lite.db')
+    cur=conn.cursor()
+    first=[]
+    second=[]
+    cur.execute('select count(*) from issue group by project')
+    data1=cur.fetchall()
+    for i in data1:
+        first.append(i[0])
+    
+    cur.execute('select count(*) from issue where not status="completed" group by project')
+    data2=cur.fetchall()
+    for i in data2:
+        second.append(i[0])
+    
+    return first,second
+
 # mytasks("alay")
 # change('Jira','completed')
